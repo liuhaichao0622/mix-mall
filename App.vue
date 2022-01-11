@@ -5,6 +5,7 @@
 	import {
 		mapMutations
 	} from 'vuex';
+	import update from '@/uni_modules/uni-upgrade-center-app/utils/check-update'
 	export default {
 		methods: {
 			...mapMutations(['login'])
@@ -20,7 +21,8 @@
 					}
 				});
 			}
-			
+			// update && alert('今天是：' + new Date().getDate() + '号了, 放我检查一下是否有更新!')
+			update()
 		},
 		onShow: function() {
 			console.log('App Show')
